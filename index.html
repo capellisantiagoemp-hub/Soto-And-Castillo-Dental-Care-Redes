@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Propuesta de redes sociales para Soto &amp; Castillo Dental Care</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3551A4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3551A4; --navy:#0F1B4D; --peri:#7B8FE0; --mist:#E9EDFB; --paper:#F6F8FE; --white:#fff;
+  --ink:#16203F; --ink-dim:#4A5578; --line:#D9DFF3; --warn:#B4531A;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --gutter:clamp(16px,4vw,48px);
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,100% - var(--gutter)*2);margin-inline:auto}
+h1,h2,h3,.num,.stat b{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:var(--blue);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.12)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand img{height:58px;width:auto;object-fit:contain}
+.steps{display:flex;gap:4px}
+.steps a{font-size:14px;font-weight:600;text-decoration:none;color:#dbe3ff;padding:10px 16px;border-radius:99px;min-height:44px;display:inline-flex;align-items:center;transition:background-color .2s var(--ease),color .2s}
+.steps a b{margin-right:7px;color:var(--peri);font-weight:700}
+.steps a.on{background:rgba(255,255,255,.16);color:#fff}
+@media (hover:hover){.steps a:hover{background:rgba(255,255,255,.12);color:#fff}}
+
+/* hero */
+.hero{background:linear-gradient(165deg,var(--blue) 0%,var(--navy) 78%);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;border:80px solid rgba(123,143,224,.22);pointer-events:none}
+.hero .wrap{padding:clamp(48px,8vw,96px) 0 clamp(44px,7vw,80px);position:relative;z-index:1}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#C7D2FF}
+.hero h1{font-weight:800;font-size:clamp(38px,6.2vw,76px);line-height:1.04;letter-spacing:-.025em;margin:18px 0 20px;max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:#B9C6FF}
+.hero p.lead{font-size:clamp(16px,1.8vw,20px);color:#DCE3FF;max-width:52ch}
+.for{margin-top:26px;display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px;color:#DCE3FF}
+.for b{color:#fff}
+.path{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:780px}
+.path a{display:block;text-decoration:none;padding:18px 20px;border-radius:var(--r);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);transition:transform .2s var(--ease),background-color .2s}
+@media (hover:hover){.path a:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}}
+.path a:active{transform:scale(.98)}
+.path small{display:block;font-size:12px;letter-spacing:.14em;font-weight:700;color:#B9C6FF}
+.path span{display:block;margin-top:4px;font-weight:600;font-size:16px;line-height:1.3}
+
+/* secciones */
+section.blk{padding:clamp(56px,8vw,104px) 0}
+#hoy{background:var(--paper)}
+#propuesta{background:var(--mist)}
+#material{background:var(--white)}
+.sec-head{margin-bottom:clamp(28px,4.5vw,48px)}
+.num{display:block;font-weight:800;font-size:clamp(46px,7vw,84px);line-height:.9;color:transparent;-webkit-text-stroke:1.5px var(--peri);margin-bottom:10px}
+.sec-head h2{font-weight:800;font-size:clamp(30px,4.4vw,50px);line-height:1.06;letter-spacing:-.02em;color:var(--navy);max-width:20ch;text-wrap:balance}
+.sec-head p{margin-top:12px;color:var(--ink-dim);max-width:60ch;font-size:clamp(16px,1.6vw,18px)}
+
+/* HOY */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
+.stat{padding:20px 22px;border-radius:var(--r);background:var(--white);border:1px solid var(--line)}
+.stat b{display:block;font-weight:800;font-size:clamp(30px,3.6vw,44px);line-height:1.05;color:var(--blue)}
+.stat span{display:block;margin-top:6px;font-size:15px;color:var(--ink-dim);line-height:1.35}
+.now{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
+.shot{border-radius:24px;border:1px solid var(--line);background:var(--white);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+@media (hover:hover){.shot:hover{transform:translateY(-5px);box-shadow:0 26px 50px -28px rgba(15,27,77,.45)}}
+.shot button{all:unset;display:block;cursor:zoom-in;position:relative;aspect-ratio:4/5;overflow:hidden;background:#fff}
+.shot button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.shot figcaption{padding:16px 20px 20px;display:grid;gap:4px;border-top:1px solid var(--line)}
+.shot figcaption b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--warn)}
+.shot figcaption span{font-size:16px;color:var(--ink);font-weight:500}
+.shot figcaption small{font-size:14px;color:var(--ink-dim)}
+.quote{margin-top:clamp(28px,4vw,44px);padding:clamp(26px,4vw,44px);border-radius:28px;background:var(--navy);color:#fff;display:grid;gap:14px;max-width:860px}
+.quote .stars{color:#F7C948;font-size:22px;letter-spacing:3px}
+.quote blockquote{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(19px,2.4vw,26px);line-height:1.3;max-width:42ch}
+.quote cite{font-style:normal;font-size:15px;color:#C7D2FF}
+
+/* PROPUESTA */
+.stage{display:grid;grid-template-columns:1fr minmax(300px,440px) 1fr;gap:clamp(20px,4vw,56px);align-items:center}
+.notes{display:grid;gap:26px}
+.note{border-left:3px solid var(--blue);padding:2px 0 2px 16px;max-width:300px}
+.notes.r .note{margin-left:auto}
+.note h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.note p{font-size:15.5px;color:var(--ink-dim);line-height:1.5}
+.phone{all:unset;display:block;box-sizing:border-box;cursor:zoom-in;position:relative;border-radius:52px;padding:11px;background:#10162f;box-shadow:0 40px 80px -30px rgba(15,27,77,.6);-webkit-tap-highlight-color:transparent;transition:transform .3s var(--ease)}
+.phone:focus-visible{outline:3px solid var(--blue);outline-offset:5px}
+.phone:active{transform:scale(.99)}
+.phone .screen{border-radius:42px;overflow:hidden;background:#fff}
+.phone .screen img{width:100%;height:auto}
+.phone .zoom{position:absolute;right:20px;bottom:20px;font-size:13px;font-weight:700;background:rgba(15,27,77,.88);color:#fff;padding:10px 16px;border-radius:99px}
+.posts-head{margin:clamp(52px,7vw,88px) 0 18px;display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.posts-head h3{font-weight:800;font-size:clamp(26px,3.4vw,36px);color:var(--navy);letter-spacing:-.015em}
+.posts-head p{font-size:15px;color:var(--ink-dim)}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--gutter) 22px;margin:0 calc(var(--gutter)*-1);scrollbar-width:thin;scrollbar-color:var(--blue) transparent;-webkit-overflow-scrolling:touch}
+.post{all:unset;box-sizing:border-box;flex:0 0 clamp(230px,64vw,310px);scroll-snap-align:start;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 34px -20px rgba(15,27,77,.5);cursor:zoom-in;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.post:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (hover:hover){.post:hover{transform:translateY(-5px)}}
+.post:active{transform:scale(.98)}
+.post img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+
+/* MATERIAL */
+.mat{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(14px,2vw,24px)}
+.ph{margin:0;border-radius:24px;overflow:hidden;background:var(--mist);position:relative;transition:transform .3s var(--ease)}
+@media (hover:hover){.ph:hover{transform:translateY(-4px)}}
+.ph button{all:unset;display:block;width:100%;cursor:zoom-in}
+.ph button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption{padding:12px 18px 14px;font-size:15px;font-weight:600;color:var(--navy);background:#fff;border-top:1px solid var(--line)}
+.ph.d{grid-column:span 2;background:var(--peri)}
+.ph.s{grid-column:span 2}
+.ph.s img{aspect-ratio:1/1.05;object-position:62% center}
+.ph.d img{aspect-ratio:1/1.05;object-position:center top}
+.ph.w{grid-column:span 3}
+.ph.w img{aspect-ratio:16/8}
+.ph.w2{grid-column:span 3}
+.ph.w2 img{aspect-ratio:16/8}
+.mat-note{margin-top:20px;color:var(--ink-dim);font-size:14px}
+
+/* CIERRE */
+.close{padding:clamp(56px,8vw,104px) 0 36px;background:var(--navy);color:#fff}
+.close h2{font-weight:800;font-size:clamp(32px,5vw,58px);line-height:1.05;letter-spacing:-.02em;max-width:19ch;text-wrap:balance}
+.close h2 em{font-style:normal;color:#B9C6FF}
+.close p.lead{margin-top:18px;color:#DCE3FF;max-width:58ch;font-size:clamp(16px,1.7vw,19px)}
+.svc{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.svc div{padding:22px;border-radius:var(--r);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);font-size:16px;line-height:1.45;color:#DCE3FF}
+.svc b{display:block;font-size:18px;margin-bottom:6px;color:#fff}
+.svc svg{width:26px;height:26px;stroke:#B9C6FF;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+.sign{margin-top:38px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18)}
+.sign p{font-size:16px;color:#DCE3FF}
+.sign p b{display:block;color:#fff;font-size:19px}
+.contact{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.contact a{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:99px;background:#fff;color:var(--navy);font-weight:700;font-size:15px;text-decoration:none;overflow-wrap:anywhere;transition:transform .2s var(--ease),background-color .2s,box-shadow .2s}
+.contact a:active{transform:scale(.97)}
+@media (hover:hover){.contact a:hover{transform:translateY(-2px);background:#E4EAFF;box-shadow:0 12px 28px -12px rgba(0,0,0,.6)}}
+.contact svg{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+footer{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);color:#B7C2EE;font-size:14px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* lightbox */
+dialog{border:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;color:#fff}
+dialog::backdrop{background:rgba(8,12,34,.92)}
+dialog .box{height:100%;overflow:auto;display:flex;justify-content:center;padding:68px 12px 28px;-webkit-overflow-scrolling:touch}
+dialog img{width:min(560px,100%);height:auto;border-radius:18px;align-self:flex-start;background:#fff}
+dialog button{position:fixed;top:14px;right:14px;z-index:2;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(15,27,77,.95);color:#fff;font-size:24px;cursor:pointer}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .stage{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
+  .phone-col{order:-1}
+  .notes{gap:20px}.notes.r .note{margin-left:0}.note{max-width:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .now{grid-template-columns:repeat(2,1fr)}
+  .now .shot:last-child{grid-column:1/-1}
+  .now .shot:last-child button{aspect-ratio:16/10}
+  .svc{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .steps{display:none}
+  .path{grid-template-columns:1fr}
+  .now{grid-template-columns:1fr}
+  .now .shot:last-child{grid-column:auto}
+  .now .shot:last-child button{aspect-ratio:4/5}
+  .mat{grid-template-columns:1fr}
+  .ph.d,.ph.s,.ph.w,.ph.w2{grid-column:auto}
+  .ph.w img,.ph.w2 img{aspect-ratio:16/9}
+  .sign{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Inicio"><img src="img/logo.webp" alt="Logo de S&amp;C Dental Care" width="183" height="58"></a>
+    <nav class="steps" aria-label="Recorrido">
+      <a href="#hoy"><b>01</b>Hoy</a>
+      <a href="#propuesta"><b>02</b>Propuesta</a>
+      <a href="#material"><b>03</b>Material</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow rv">Propuesta de redes sociales</div>
+      <h1 class="rv" style="--d:.06s">Sus redes, a la altura de <em>su consultorio</em>.</h1>
+      <p class="lead rv" style="--d:.12s">Armamos una muestra de cómo podrían verse el Instagram y el Facebook de S&amp;C Dental Care, con su logo, sus colores y las fotos reales de su consultorio.</p>
+      <div class="for rv" style="--d:.18s">
+        <span>Preparada para <b>Dra. Paola Soto y Dra. Sandra Castillo</b></span>
+        <span>Hollywood, FL</span>
+      </div>
+      <div class="path rv" style="--d:.24s">
+        <a href="#hoy"><small>01</small><span>Cómo están hoy</span></a>
+        <a href="#propuesta"><small>02</small><span>Cómo podrían verse</span></a>
+        <a href="#material"><small>03</small><span>Material que ya tenemos</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="hoy">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="num">01</span>
+        <h2>Un buen punto de partida</h2>
+        <p>Sus pacientes ya las recomiendan, y sus perfiles tienen mucho material valioso. Así se ven hoy.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat rv"><b>4,7</b><span>en Google, con 282 reseñas</span></div>
+        <div class="stat rv" style="--d:.05s"><b>613</b><span>seguidores en Instagram</span></div>
+        <div class="stat rv" style="--d:.1s"><b>293</b><span>publicaciones en Instagram</span></div>
+        <div class="stat rv" style="--d:.15s"><b>Oct. 2025</b><span>última publicación en Instagram (un reel)</span></div>
+      </div>
+
+      <div class="now">
+        <figure class="shot rv">
+          <button type="button" data-zoom="img/hoy-ig-perfil.webp" data-alt="Captura del perfil de Instagram @sotoandcastillodental" aria-label="Ampliar captura del perfil de Instagram"><img src="img/hoy-ig-perfil.webp" alt="Captura del perfil de Instagram @sotoandcastillodental: 293 publicaciones, 613 seguidores y 302 seguidos" width="532" height="603" loading="lazy"></button>
+          <figcaption><b>Instagram · perfil</b><span>293 publicaciones y 613 seguidores</span><small>Foto de perfil con las doctoras, sin el logo del consultorio</small></figcaption>
+        </figure>
+        <figure class="shot rv" style="--d:.08s">
+          <button type="button" data-zoom="img/hoy-ig-grilla.webp" data-alt="Captura de la grilla de Instagram" aria-label="Ampliar captura de la grilla de Instagram"><img src="img/hoy-ig-grilla.webp" alt="Captura de la grilla de publicaciones de Instagram con el equipo, casos de antes y después y videos" width="532" height="603" loading="lazy"></button>
+          <figcaption><b>Instagram · publicaciones</b><span>Última publicación: octubre de 2025</span><small>Buenos casos y videos, sin una línea visual que los una</small></figcaption>
+        </figure>
+        <figure class="shot rv" style="--d:.16s">
+          <button type="button" data-zoom="img/hoy-fb.webp" data-alt="Captura de la página de Facebook S&amp;C Dental Care" aria-label="Ampliar captura de Facebook"><img src="img/hoy-fb.webp" alt="Captura de la página de Facebook S&amp;C Dental Care con 70 seguidores" width="532" height="603" loading="lazy"></button>
+          <figcaption><b>Facebook · página</b><span>70 seguidores</span><small>El mismo reel de octubre de 2025 como última publicación visible</small></figcaption>
+        </figure>
+      </div>
+
+      <div class="quote rv">
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote>“The best dental office available! Dr. Castillo has been with me since I was a kid and I’ve never had any issues. Very sweet staff and always accommodating with times and schedules.”</blockquote>
+        <cite>josh, reseña en Google</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="propuesta">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="num">02</span>
+        <h2>Así podría verse @sotoandcastillodental</h2>
+        <p>Su logo como foto de perfil, historias destacadas por tratamiento y una grilla con diseño propio, en los azules de su marca.</p>
+      </div>
+
+      <div class="stage">
+        <div class="notes l">
+          <div class="note rv"><h3>Perfil con su marca</h3><p>El logo del consultorio como foto de perfil, con teléfono, dirección y botones de contacto a la vista.</p></div>
+          <div class="note rv" style="--d:.08s"><h3>Historias destacadas</h3><p>Casos, opiniones, preguntas, servicios y equipo, ordenados para que el paciente encuentre lo que busca.</p></div>
+          <div class="note rv" style="--d:.16s"><h3>Grilla coherente</h3><p>Cada publicación con el mismo estilo, azul y blanco, reconocible a primera vista.</p></div>
+        </div>
+
+        <div class="phone-col rv" style="--d:.08s">
+          <button class="phone" type="button" data-zoom="img/feed.webp" data-alt="Feed propuesto de Instagram de S&amp;C Dental Care completo" aria-label="Ampliar el feed propuesto">
+            <span class="screen"><img src="img/feed.webp" alt="Feed propuesto de Instagram: perfil con logo, historias destacadas y grilla de publicaciones diseñadas" width="1080" height="1906"></span>
+            <span class="zoom" aria-hidden="true">Tocar para ampliar</span>
+          </button>
+        </div>
+
+        <div class="notes r">
+          <div class="note rv"><h3>Contenido que se entiende</h3><p>Mensajes cortos sobre Invisalign, carillas e implantes, con una llamada clara a pedir su cita.</p></div>
+          <div class="note rv" style="--d:.08s"><h3>Reels y fotos reales</h3><p>Sumamos videos cortos y fotos de su equipo y su consultorio, para mostrar quiénes son.</p></div>
+          <div class="note rv" style="--d:.16s"><h3>Facebook al día</h3><p>Las mismas publicaciones en su página de Facebook, para llegar a quienes las siguen allí.</p></div>
+        </div>
+      </div>
+
+      <div class="posts-head rv">
+        <h3>Seis ejemplos, de cerca</h3>
+        <p>Deslice para ver más. Toque para ampliar.</p>
+      </div>
+      <div class="rail rv" aria-label="Publicaciones propuestas">
+        <button class="post" type="button" data-zoom="img/post1.webp" data-alt="Publicación propuesta 1"><img src="img/post1.webp" alt="Publicación propuesta 1: Bienvenido a S&amp;C Dental Care, con las dos doctoras" width="900" height="1125" loading="lazy"></button>
+        <button class="post" type="button" data-zoom="img/post2.webp" data-alt="Publicación propuesta 2"><img src="img/post2.webp" alt="Publicación propuesta 2: Una sonrisa alineada, sin complicarse (Invisalign)" width="900" height="1125" loading="lazy"></button>
+        <button class="post" type="button" data-zoom="img/post3.webp" data-alt="Publicación propuesta 3"><img src="img/post3.webp" alt="Publicación propuesta 3: Carillas de porcelana" width="900" height="1125" loading="lazy"></button>
+        <button class="post" type="button" data-zoom="img/post4.webp" data-alt="Publicación propuesta 4"><img src="img/post4.webp" alt="Publicación propuesta 4: Recupere los dientes que le faltan" width="900" height="1125" loading="lazy"></button>
+        <button class="post" type="button" data-zoom="img/post5.webp" data-alt="Publicación propuesta 5"><img src="img/post5.webp" alt="Publicación propuesta 5: Su cita, a una llamada" width="900" height="1125" loading="lazy"></button>
+        <button class="post" type="button" data-zoom="img/post6.webp" data-alt="Publicación propuesta 6"><img src="img/post6.webp" alt="Publicación propuesta 6: Odontología general para toda la familia" width="900" height="1125" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="material">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="num">03</span>
+        <h2>Su consultorio ya tiene mucho para mostrar</h2>
+        <p>Estas son las fotos reales que usaríamos para dar rostro y lugar a cada publicación.</p>
+      </div>
+      <div class="mat">
+        <figure class="ph d rv"><button type="button" data-zoom="img/dra-soto.webp" data-alt="Dra. Paola Soto"><img src="img/dra-soto.webp" alt="Retrato de la Dra. Paola Soto con bata blanca" width="335" height="374" loading="lazy"></button><figcaption>Dra. Paola Soto</figcaption></figure>
+        <figure class="ph d rv" style="--d:.08s"><button type="button" data-zoom="img/dra-castillo.webp" data-alt="Dra. Sandra Castillo"><img src="img/dra-castillo.webp" alt="Retrato de la Dra. Sandra Castillo" width="336" height="374" loading="lazy"></button><figcaption>Dra. Sandra Castillo</figcaption></figure>
+        <figure class="ph s rv" style="--d:.16s"><button type="button" data-zoom="img/sala-1.webp" data-alt="Sala de espera"><img src="img/sala-1.webp" alt="Sala de espera con sofá azul y el letrero S&amp;C Dental Care en la pared" width="1400" height="662" loading="lazy"></button><figcaption>Sala de espera</figcaption></figure>
+        <figure class="ph w rv" style="--d:.08s"><button type="button" data-zoom="img/sala-2.webp" data-alt="Sala de espera"><img src="img/sala-2.webp" alt="Otra vista de la sala de espera con sillas, planta y el letrero del consultorio" width="1400" height="662" loading="lazy"></button><figcaption>Sala de espera, otra vista</figcaption></figure>
+        <figure class="ph w2 rv"><button type="button" data-zoom="img/recepcion.webp" data-alt="Recepción"><img src="img/recepcion.webp" alt="Recepción y pasillo del consultorio con paredes celestes" width="1400" height="664" loading="lazy"></button><figcaption>Recepción y pasillo</figcaption></figure>
+      </div>
+      <p class="mat-note">Fotos del consultorio tomadas de su ficha de Google y de su sitio actual.</p>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="wrap">
+      <div class="rv">
+        <h2>Gestión mensual de sus redes, <em>para que usted se dedique a sus pacientes</em>.</h2>
+        <p class="lead">Nos ocupamos de su Instagram y su Facebook: creamos el contenido, lo publicamos y mantenemos sus perfiles activos.</p>
+      </div>
+      <div class="svc">
+        <div class="rv">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>
+          <b>Instagram y Facebook</b>Gestión de ambos perfiles, con su logo y sus colores.
+        </div>
+        <div class="rv" style="--d:.06s">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.2-2.5z"/></svg>
+          <b>Contenido y Reels</b>Publicaciones diseñadas y videos cortos con fotos reales de su consultorio.
+        </div>
+        <div class="rv" style="--d:.12s">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>
+          <b>Todos los meses</b>Un perfil activo y al día, sin que usted tenga que ocuparse.
+        </div>
+      </div>
+      <div class="sign rv">
+        <p><b>Santiago Capelli · Ticca Mkt</b>Si le interesa, con gusto coordinamos una llamada breve.</p>
+        <ul class="contact">
+          <li><a href="https://ticca.agency" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.9 5.8 3.9 9s-1.3 6.2-3.9 9c-2.6-2.8-3.9-5.8-3.9-9S9.400 5.800 12 3z"/></svg>ticca.agency</a></li>
+          <li><a href="mailto:capellisantiagoemp@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.500 7.500l8.500 6 8.500-6"/></svg>capellisantiagoemp@gmail.com</a></li>
+        </ul>
+      </div>
+      <footer>
+        <span>Propuesta preparada para Soto &amp; Castillo Dental Care · 3911 Hollywood Blvd #102, Hollywood, FL 33021</span>
+        <span>Tel. (954) 987-3344</span>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<dialog id="lb" aria-label="Imagen ampliada">
+  <button type="button" id="lbx" aria-label="Cerrar">×</button>
+  <div class="box" id="lbbox"><img id="lbimg" alt=""></div>
+</dialog>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rv = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.05,rootMargin:'0px 0px -4% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+    setTimeout(function(){rv.forEach(function(el){el.classList.add('in')})},2500);
+  } else rv.forEach(function(el){el.classList.add('in')});
+  var links = document.querySelectorAll('.steps a');
+  if('IntersectionObserver' in window){
+    var so = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+    ['hoy','propuesta','material'].forEach(function(id){so.observe(document.getElementById(id))});
+  }
+  var lb=document.getElementById('lb'),img=document.getElementById('lbimg'),box=document.getElementById('lbbox');
+  function open(src,alt){img.src=src;img.alt=alt||'';box.scrollTop=0;if(lb.showModal)lb.showModal();else lb.setAttribute('open','')}
+  function close(){lb.close?lb.close():lb.removeAttribute('open')}
+  document.querySelectorAll('[data-zoom]').forEach(function(el){el.addEventListener('click',function(){open(el.dataset.zoom,el.dataset.alt)})});
+  document.getElementById('lbx').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target===box)close()});
+})();
+</script>
+</body>
+</html>
